@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ConnectModel extends Model
+class PageModel extends Model
 {
-    protected $table = 'connected';
+    protected $table = 'page';
     public $timestamps = false;
 }

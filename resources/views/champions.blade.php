@@ -7,3 +7,4 @@
 @endsection
 @section('side_left')<div><img src="./images/gragas.png" alt="Landing" class="med_circle"></div>@endsection
 @section('side_right')<div><img src="./images/lux.png" alt="Landing" class="med_circle right_pic"></div>@endsection
+<!-- массив данных с названиями и когда нажимаешь на кнопку, то они меняются местами -->

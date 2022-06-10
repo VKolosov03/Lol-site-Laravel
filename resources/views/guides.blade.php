@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title')@yield('title_guide')@endsection
+@section('title')<title>Guides</title>@endsection
 @section('footer_change') 
         @if(count($reply)>0)
         <style type="text/css">
@@ -7,10 +7,15 @@
         </style>
         @endif
 @endsection
-@section('main') 
+@section('main')
             <div class="central">
-                @yield('main_guide')
-                <form method="post" action="pyke/reply">
+                <h class="title_landing"><center>{{$guide->title}}</center></h>
+                <div><img src="./images/{{$guide->name}}.png" alt="Landing" class="guide-pic1"></div>
+                <p class="guide_text1">{{$guide->first_paragraph}}</p>
+                <p class="guide_text2">{!!$guide->second_paragraph!!}</p>
+                <p class="guide_text3">{{$guide->third_paragraph}}</p>
+                <div><img src="./images/{{$guide->name}}2.png" alt="Landing" class="guide-pic2"></div>
+                <form method="post" action="{{$guide->name}}/reply">
                     @csrf
                     <input type="text" class="comment_input" minlength="3" maxlength="140" name="comment" id="comment" placeholder="Leave your comment here">
                     <button type="submit" class="comment_button" >Reply</button>
